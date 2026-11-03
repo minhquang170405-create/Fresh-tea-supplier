@@ -171,3 +171,112 @@ img{max-width:100%;display:block}
 @media (max-width:560px){.report-image-placeholder{min-height:370px}}
 @media (max-width:800px){html{scroll-padding-top:72px}.site-nav a:not(.nav-cta)::after{right:auto;width:90px;bottom:3px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Supplier flow styled for the TS 567 brand. */
+.utility-bar{background:#102f27;color:#dce9d7;font-size:12px;font-weight:600}
+.utility-inner{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.utility-inner a{color:#e6f0dc;text-decoration:none}
+.utility-inner a:hover{text-decoration:underline}
+.site-header{box-shadow:0 8px 24px rgba(9,42,30,.1)}
+.site-nav{gap:25px}
+.site-nav a{min-height:44px;display:inline-flex;align-items:center}
+.site-nav .nav-cta{min-height:48px}
+.hero-reference{position:relative;display:block;min-height:630px;background:radial-gradient(circle at 78% 75%,rgba(110,157,96,.28),transparent 38%),linear-gradient(115deg,#0c3027 4%,#164c38 62%,#1c5840 100%);overflow:hidden}
+.hero-reference:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse at 85% 96%,transparent 0 51px,rgba(224,247,214,.045) 52px 53px,transparent 54px 91px);pointer-events:none}
+.hero-reference .hero-copy{width:64%;min-height:630px;background:transparent}
+.hero-reference .hero-copy:before{display:none}
+.hero-reference .hero-inner{max-width:830px;padding-top:90px;padding-bottom:90px;padding-right:36px}
+.hero-reference h1{font-size:clamp(48px,4.5vw,76px);max-width:710px;line-height:1.12}
+.hero-reference h1 span{font-size:.74em;line-height:1.22;max-width:620px;margin-top:10px}
+.hero-reference .hero-lead{max-width:620px}
+.button-ghost{color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.67)}
+.button-ghost:hover{color:var(--forest);background:#fff}
+.hero-reference .hero-media{position:absolute;right:max(32px,calc((100vw - 1240px)/2));top:9%;width:min(34vw,470px);height:82%;min-height:0;border:1px solid rgba(255,255,255,.5);box-shadow:0 26px 65px rgba(5,28,19,.3)}
+.hero-reference .hero-placeholder{background:linear-gradient(155deg,#d7e9cf,#b8d5ad 62%,#8bb587);gap:18px}
+.hero-reference .hero-placeholder-label{background:rgba(255,255,255,.84);padding:7px 11px;border-radius:2px;color:#28543a}
+.hero-reference .hero-placeholder-copy strong{font-size:clamp(23px,2vw,29px)}
+.hero-reference .hero-note{margin-top:35px;color:#d2e2d3}
+.proof-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.proof-grid>div{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:4px;padding:19px 21px;min-height:104px}
+.proof-index{grid-row:auto;color:#487a4d;font:800 12px 'Be Vietnam Pro',Arial,sans-serif;letter-spacing:.12em}
+.proof-grid strong{font-size:14px;line-height:1.4;align-self:auto}
+.proof-grid small{font-size:10px;letter-spacing:.1em;font-weight:800;color:#698568;order:-1;margin:0}
+.supplier-intro{background:#fffdf8;padding:88px 0}
+.supplier-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.supplier-intro-grid h2{font-size:clamp(42px,4.4vw,62px)}
+.supplier-intro-grid h2 i{color:#6c9d58}
+.supplier-intro-grid>div:last-child{padding-top:8px}
+.supplier-intro-grid p{font-size:16px;line-height:1.8;margin:0 0 20px;max-width:610px}
+.supplier-intro-grid .intro-placeholder{border-left:3px solid #86b471;background:#eef3e9;color:#49624c;padding:15px 18px;font-size:14px}
+.supplier-intro-grid .text-link{color:var(--forest)}
+.product-section{border-top:1px solid #e2e7db}
+.product-visuals{gap:16px}
+.placeholder-card{border:1px dashed #8bad89;background:linear-gradient(145deg,#e4efe0,#f0f5eb)}
+.placeholder-primary{background:linear-gradient(150deg,#d1e5cb,#eaf3e5)}
+.placeholder-card strong{font-size:25px}
+.placeholder-card small{font-size:12px}
+.section-heading>p{font-size:15px}
+.process-section{background:#fffdf8}
+.steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.step-card{position:relative;background:#eef3e9;border:1px solid #dce7d7;padding:31px 30px 27px;min-height:265px;display:flex;flex-direction:column}
+.step-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--forest) 0 65%,var(--leaf) 65%)}
+.step-number{color:#5e8e5a;font-family:'Lora',Georgia,serif;font-size:35px;line-height:1}
+.step-card h3{font-family:'Lora',Georgia,serif;font-size:27px;font-weight:500;line-height:1.25;margin:19px 0 8px}
+.step-card p{font-size:14px;line-height:1.7;color:#586d5c;margin:0 0 15px}
+.step-card small{font-size:12px;color:#6b8a6d;margin-top:auto;border-top:1px solid #cddccc;padding-top:12px}
+.packing-note{display:grid;grid-template-columns:1.1fr 1.4fr auto;gap:30px;align-items:center;background:#dce8d7;border:1px solid #c5d8bf;padding:22px 26px;margin-top:20px}
+.packing-note>div{display:flex;flex-direction:column;gap:5px}
+.packing-note>div span{font-size:11px;letter-spacing:.12em;font-weight:800;color:#4d794e}
+.packing-note>div strong{font-size:14px;color:var(--forest)}
+.packing-note p{margin:0;font-size:13px;line-height:1.7;color:#47634c}
+.packing-note a{white-space:nowrap;color:var(--forest)}
+.quality-copy .metric-grid{margin-bottom:25px}
+.quality-copy .metric-grid strong{font:700 24px 'Be Vietnam Pro',Arial,sans-serif;color:#b6df89}
+.quality-copy .metric-grid span{font-size:12px;line-height:1.5}
+.quality-caution{font-size:12px!important;border-left:2px solid #a7d377;padding-left:14px;margin:0!important}
+.report-footer strong{font-size:12px}
+.about-copy .video-placeholder{display:flex;flex-direction:column;gap:5px;margin-top:18px;border:1px dashed #93af8e;padding:18px 20px;background:rgba(255,255,255,.45)}
+.video-placeholder span{font-size:11px;letter-spacing:.12em;font-weight:800;color:#668b59}
+.video-placeholder strong{font-size:14px;font-weight:600;color:var(--forest)}
+.future-section{background:#f7f6ef}
+.future-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.future-grid article{background:#fff;border:1px solid #dce4d8;padding:28px;min-height:223px;display:flex;flex-direction:column}
+.future-grid article span{font-size:11px;letter-spacing:.12em;font-weight:800;color:#5f8b58}
+.future-grid h3{font-family:'Lora',Georgia,serif;font-size:25px;line-height:1.3;font-weight:500;margin:16px 0 9px;color:var(--forest)}
+.future-grid p{font-size:13px;color:#657568;line-height:1.7;margin:0 0 17px}
+.future-grid small{font-size:11px;font-weight:700;color:#688b64;margin-top:auto}
+.cta-band{background:#20503a;color:#fff;padding:47px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta-inner .eyebrow{margin-bottom:9px}
+.cta-inner h2{font-family:'Lora',Georgia,serif;font-size:clamp(30px,3vw,42px);font-weight:400;line-height:1.25;margin:0 0 6px}
+.cta-inner p:not(.eyebrow){font-size:14px;color:#d3e5d0;margin:0}
+.cta-inner .button{flex:none}
+.quote-form .form-row:nth-of-type(3){margin-bottom:0}
+.quote-form label{display:block}
+.quote-form input,.quote-form textarea{display:block;margin-top:7px}
+.footer-layout>div:nth-child(2){max-width:670px;justify-content:flex-end}
+
+@media (max-width:1100px){.site-nav{gap:13px}.site-nav a{font-size:11px}.site-nav .nav-cta{padding-inline:13px}.hero-reference .hero-copy{width:62%}.hero-reference .hero-media{width:35vw}}
+@media (max-width:980px){
+  .site-header{height:72px}.brand-image{width:45px;height:45px}.brand-image img{width:81px;left:-18px;top:-35px}.brand-copy strong{font-size:22px}
+  .menu-toggle{display:flex;width:44px;height:44px;padding:11px;border:1px solid #cbd8c8;background:transparent;flex-direction:column;justify-content:space-around;border-radius:3px}
+  .menu-toggle span{height:2px;width:100%;background:var(--forest)}
+  .site-nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);padding:18px 22px 25px;box-shadow:0 15px 25px rgba(0,0,0,.1);flex-direction:column;align-items:stretch;gap:0}
+  .site-nav.open{display:flex}.site-nav a{padding:12px 5px;font-size:14px}.site-nav .nav-cta{margin-top:10px;justify-content:space-between;padding:15px}
+  html{scroll-padding-top:72px}.site-nav a:not(.nav-cta)::after{right:auto;width:90px;bottom:3px}
+  .hero-reference{min-height:0}.hero-reference .hero-copy{width:100%;min-height:0}.hero-reference .hero-inner{max-width:none;padding:72px max(28px,calc((100vw - 760px)/2)) 50px}
+  .hero-reference .hero-media{position:relative;top:auto;right:auto;width:calc(100% - 56px);height:350px;min-height:0;margin:0 auto 45px}
+  .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-grid>div:nth-child(2){border-right:0}.proof-grid>div:nth-child(-n+2){border-bottom:1px solid #cbd7c8}
+  .supplier-intro-grid{gap:45px}.packing-note{grid-template-columns:1fr 1.2fr}.packing-note a{grid-column:1/-1;width:max-content}
+}
+@media (max-width:800px){.supplier-intro-grid{grid-template-columns:1fr}.steps-grid,.future-grid{grid-template-columns:1fr}.packing-note{grid-template-columns:1fr}.packing-note a{grid-column:auto}.cta-inner{align-items:flex-start;flex-direction:column}}
+@media (max-width:560px){
+  .utility-bar{font-size:10px}.utility-inner{min-height:33px}.utility-inner>a{max-width:165px;text-align:right;line-height:1.25}
+  .hero-reference .hero-inner{padding:60px 22px 45px}.hero-reference h1{font-size:clamp(43px,12vw,58px)}.hero-reference h1 span{font-size:.7em}.hero-reference .hero-media{width:calc(100% - 32px);height:260px;margin-bottom:30px}
+  .hero-reference .hero-placeholder-copy strong{font-size:19px}.hero-reference .hero-note{margin-top:25px}
+  .proof-grid{grid-template-columns:1fr}.proof-grid>div{min-height:78px;padding:12px 0!important;border-right:0;border-bottom:1px solid #cbd7c8}.proof-grid>div:last-child{border-bottom:0}
+  .supplier-intro{padding:65px 0}.supplier-intro-grid{gap:23px}.supplier-intro-grid p{font-size:15px}
+  .steps-grid,.future-grid{grid-template-columns:1fr}.step-card,.future-grid article{min-height:0}.packing-note{padding:19px}.cta-band{padding:40px 0}.cta-inner .button{width:100%}
+  .quality-copy .metric-grid strong{font-size:21px}.quality-copy .metric-grid span{font-size:11px}
+}
+
