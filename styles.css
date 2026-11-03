@@ -1,6 +1,6 @@
 :root{--forest:#153d32;--deep:#0d3028;--pine:#1f5140;--leaf:#8fc957;--cream:#f6f4ec;--paper:#fffdf8;--ink:#18382f;--muted:#6d7d72;--line:#d9dfd3;--clay:#c8764e;--shadow:0 22px 60px rgba(14,48,39,.13)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:'Be Vietnam Pro',Arial,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 button,input,textarea{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -11,7 +11,7 @@ img{max-width:100%;display:block}
 .skip-link{position:absolute;left:16px;top:-60px;z-index:1000;background:#fff;padding:10px 18px;color:#0d3028}
 .skip-link:focus{top:8px}
 :focus-visible{outline:3px solid #cb823c;outline-offset:3px}
-.site-header{height:86px;background:var(--paper);border-bottom:1px solid #e7e8df;position:relative;z-index:20}
+.site-header{height:86px;background:var(--paper);border-bottom:1px solid #e7e8df;position:sticky;top:0;z-index:20;box-shadow:0 4px 18px rgba(14,48,39,.08)}
 .nav-shell{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}
 .brand-image{width:53px;height:53px;overflow:hidden;background:white;border-radius:50%;border:1px solid #e3e9dc;position:relative}
@@ -166,4 +166,5 @@ img{max-width:100%;display:block}
 @media (max-width:800px){.hero-placeholder svg{width:250px}.gallery-placeholder.gallery-main svg{width:130px;height:96px}.gallery-placeholder.gallery-main strong{font-size:26px}}
 @media (max-width:560px){.hero-placeholder{gap:7px;padding:36px 20px 22px}.hero-placeholder-label{top:17px;left:20px;font-size:9px}.hero-placeholder svg{width:160px}.hero-placeholder-copy strong{font-size:18px}.hero-placeholder-copy span{font-size:10px}.gallery-placeholder.gallery-main{padding:22px}.gallery-placeholder.gallery-main svg{width:100px;height:76px}.gallery-placeholder.gallery-main strong{font-size:23px}}
 @media (max-width:560px){.report-image-placeholder{min-height:370px}}
+@media (max-width:800px){html{scroll-padding-top:72px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
