@@ -1,7 +1,8 @@
 # TS 567 — Trà Mã Dọ
 
-Static website template. Open `index.html` through a local HTTP server. The CSS, JavaScript, fonts, and logo are included so the page renders correctly.
+Static supplier website for TS 567. Open `index.html` through a local HTTP server. The CSS, JavaScript, Vietnamese fonts, and logo are included locally.
 
-Product and garden photography use placeholders. The public version also uses placeholders for laboratory results and the report scan until those materials are approved for publication. The quote form is a demo and does not send data.
+Product, garden, packing, market, partner, and news sections contain clearly marked placeholders where verified content is unavailable. The public version also uses placeholders for laboratory results and the report scan until those materials are approved for publication. The quote form is a preview and does not send or save data.
 
-To publish with GitHub Pages, open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then save. The site URL will be `https://minhquang170405-create.github.io/Fresh-tea-supplier/` after GitHub finishes publishing.
+The public website is published from the `main` branch with GitHub Pages at `https://minhquang170405-create.github.io/Fresh-tea-supplier/`.
+
