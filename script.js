@@ -15,10 +15,19 @@ menu?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || !menu?.classList.contains('open')) return;
+  menu.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Mở menu');
+  menuButton?.focus();
+});
+
 document.querySelector('#quote-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const status = document.querySelector('#form-status');
   if (!form.reportValidity()) return;
-  status.textContent = 'Đây là biểu mẫu trình diễn. Hãy bổ sung thông tin liên hệ và kênh nhận yêu cầu để sử dụng.';
+  status.textContent = 'Biểu mẫu hợp lệ nhưng đang ở chế độ xem trước. Dữ liệu chưa được gửi hoặc lưu.';
 });
+
