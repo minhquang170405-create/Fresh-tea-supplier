@@ -26,17 +26,17 @@ img{max-width:100%;display:block}
 .site-nav .nav-cta{padding:13px 19px;background:var(--forest);color:#fff;border-radius:3px;display:flex;gap:16px;align-items:center}
 .site-nav .nav-cta:hover{color:#fff;background:#27684f}
 .menu-toggle{display:none}
-.hero{min-height:600px;display:grid;grid-template-columns:48% 52%;background:var(--deep)}
+.hero{min-height:620px;display:grid;grid-template-columns:minmax(0,52%) minmax(0,48%);background:var(--deep)}
 .hero-copy{display:flex;align-items:center;position:relative;overflow:hidden}
 .hero-copy:before{content:"";position:absolute;right:-140px;bottom:-160px;width:420px;height:420px;border:1px solid rgba(255,255,255,.09);border-radius:50%;box-shadow:0 0 0 75px rgba(255,255,255,.025),0 0 0 150px rgba(255,255,255,.025)}
-.hero-inner{max-width:580px;padding:85px 35px 85px max(32px,calc((100vw - 1240px)/2));position:relative;z-index:1}
+.hero-inner{width:100%;padding:72px clamp(32px,3vw,56px) 72px max(32px,calc((100vw - 1240px)/2));position:relative;z-index:1}
 .eyebrow{display:flex;align-items:center;gap:14px;color:#668b55;font-size:11px;font-weight:800;letter-spacing:.1em;line-height:1.6;margin:0 0 24px;text-transform:uppercase}
 .eyebrow.light{color:#aada7a}
 .eyebrow-line{display:inline-block;width:30px;height:1px;background:currentColor}
 .hero h1,.section h2,.contact-section h2{font-family:'Lora',Georgia,serif;font-weight:400;letter-spacing:-.025em;line-height:1.18;margin:0}
-.hero h1{font-size:clamp(55px,6vw,100px);color:#fff;max-width:570px}
+.hero h1{font-size:clamp(50px,5vw,86px);color:#fff;line-height:1.12}
 .hero h1 span{display:block;color:#b8d892;font-style:italic}
-.hero-lead{color:#d2e0d5;max-width:435px;font-size:18px;line-height:1.75;margin:28px 0 33px}
+.hero-lead{color:#d2e0d5;max-width:490px;font-size:18px;line-height:1.7;margin:24px 0 30px}
 .hero-actions{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
 .button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;min-height:52px;padding:14px 23px;font-size:13px;font-weight:800;line-height:1.2;text-decoration:none;border:0;border-radius:3px;transition:transform .2s,background .2s,box-shadow .2s}
 .button:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,0,0,.14)}
@@ -46,9 +46,9 @@ img{max-width:100%;display:block}
 .button-dark:hover{background:#286a50}
 .text-link{font-size:13px;font-weight:800;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px;display:inline-flex;gap:16px}
 .light-link{color:#fff}
-.hero-note{color:#b4c7b8;font-size:11px;line-height:1.4;margin-top:55px;display:flex;gap:9px;align-items:center}
+.hero-note{color:#b4c7b8;font-size:11px;line-height:1.4;margin-top:42px;display:flex;gap:9px;align-items:center}
 .hero-note-dot{width:6px;height:6px;background:var(--leaf);border-radius:50%;flex:none}
-.hero-media{position:relative;overflow:hidden;min-height:600px}
+.hero-media{position:relative;overflow:hidden;min-height:620px}
 .hero-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:65px 42px;background:radial-gradient(circle at 75% 25%,#edf5e5 0,#dcebd7 36%,#bdd4b9 100%);color:#315a47;text-align:center}
 .hero-placeholder:before{content:"";position:absolute;width:580px;height:580px;border:1px solid rgba(37,87,63,.12);border-radius:50%;right:-270px;bottom:-340px;box-shadow:0 0 0 65px rgba(255,255,255,.1),0 0 0 125px rgba(255,255,255,.08);pointer-events:none}
 .hero-placeholder-label{position:absolute;top:30px;left:35px;font-size:10px;font-weight:800;letter-spacing:.14em;color:#5a815f}
