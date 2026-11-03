@@ -21,10 +21,13 @@ img{max-width:100%;display:block}
 .brand-copy strong em{color:#63a84a;font-style:normal}
 .brand-copy small{font-size:9px;letter-spacing:.1em;font-weight:800;color:#647b62;margin-top:5px}
 .site-nav{display:flex;align-items:center;gap:32px}
-.site-nav a{font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:color .2s}
-.site-nav a:hover{color:#508e42}
+.site-nav a{font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:color .2s,background-color .2s}
+.site-nav a:not(.nav-cta){position:relative}
+.site-nav a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:3px;background:linear-gradient(90deg,var(--forest) 0 50%,var(--leaf) 50% 100%);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.site-nav a:not(.nav-cta):hover{color:var(--pine)}
+.site-nav a:not(.nav-cta):is(:hover,:focus-visible)::after{transform:scaleX(1)}
 .site-nav .nav-cta{padding:13px 19px;background:var(--forest);color:#fff;border-radius:3px;display:flex;gap:16px;align-items:center}
-.site-nav .nav-cta:hover{color:#fff;background:#27684f}
+.site-nav .nav-cta:is(:hover,:focus-visible){color:var(--forest);background:var(--leaf)}
 .menu-toggle{display:none}
 .hero{min-height:620px;display:grid;grid-template-columns:minmax(0,52%) minmax(0,48%);background:var(--deep)}
 .hero-copy{display:flex;align-items:center;position:relative;overflow:hidden}
@@ -166,5 +169,5 @@ img{max-width:100%;display:block}
 @media (max-width:800px){.hero-placeholder svg{width:250px}.gallery-placeholder.gallery-main svg{width:130px;height:96px}.gallery-placeholder.gallery-main strong{font-size:26px}}
 @media (max-width:560px){.hero-placeholder{gap:7px;padding:36px 20px 22px}.hero-placeholder-label{top:17px;left:20px;font-size:9px}.hero-placeholder svg{width:160px}.hero-placeholder-copy strong{font-size:18px}.hero-placeholder-copy span{font-size:10px}.gallery-placeholder.gallery-main{padding:22px}.gallery-placeholder.gallery-main svg{width:100px;height:76px}.gallery-placeholder.gallery-main strong{font-size:23px}}
 @media (max-width:560px){.report-image-placeholder{min-height:370px}}
-@media (max-width:800px){html{scroll-padding-top:72px}}
+@media (max-width:800px){html{scroll-padding-top:72px}.site-nav a:not(.nav-cta)::after{right:auto;width:90px;bottom:3px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
