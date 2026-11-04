@@ -63,7 +63,6 @@ img{max-width:100%;display:block}
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr)}
 .proof-grid>div{min-height:105px;display:grid;grid-template-columns:32px 1fr;grid-template-rows:1fr 1fr;column-gap:11px;align-content:center;padding:24px 20px;border-right:1px solid #cbd7c8}
 .proof-grid>div:first-child{padding-left:0}.proof-grid>div:last-child{border-right:0}
-.proof-index{grid-row:1/3;font-family:'Lora',Georgia,serif;color:#749763;font-size:21px;line-height:1.2}
 .proof-grid strong{font-size:13px;align-self:end;line-height:1.2}.proof-grid small{font-size:11px;color:#6e7e71;align-self:start;margin-top:4px}
 .section{padding:105px 0}
 .section-heading{margin-bottom:42px}
@@ -95,7 +94,7 @@ img{max-width:100%;display:block}
 .garden-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
 .gallery-placeholder{position:relative;overflow:hidden;border:1px dashed #a5bda2;background:linear-gradient(145deg,#e8efe2,#f5f7ef);padding:22px;color:#365b47;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
 .gallery-placeholder:before{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(74,123,79,.13);border-radius:50%;right:-90px;top:-110px;pointer-events:none}
-.gallery-placeholder-number{position:relative;font-size:10px;letter-spacing:.12em;font-weight:800;color:#638765}
+.gallery-placeholder-label{position:relative;font-size:10px;letter-spacing:.12em;font-weight:800;color:#638765}
 .gallery-placeholder svg{position:relative;width:100px;height:76px;align-self:flex-end;fill:none;stroke:#86a88b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .gallery-placeholder>div{position:relative;display:flex;flex-direction:column;gap:4px}
 .gallery-placeholder strong{font-family:'Lora',Georgia,serif;font-size:23px;font-weight:400;line-height:1.28}
@@ -193,8 +192,7 @@ img{max-width:100%;display:block}
 .hero-reference .hero-placeholder-copy strong{font-size:clamp(23px,2vw,29px)}
 .hero-reference .hero-note{margin-top:35px;color:#d2e2d3}
 .proof-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-.proof-grid>div{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:4px;padding:19px 21px;min-height:104px}
-.proof-index{grid-row:auto;color:#487a4d;font:800 12px 'Be Vietnam Pro',Arial,sans-serif;letter-spacing:.12em}
+.proof-grid>div{grid-template-columns:1fr;grid-template-rows:auto auto;gap:4px;padding:19px 21px;min-height:104px}
 .proof-grid strong{font-size:14px;line-height:1.4;align-self:auto}
 .proof-grid small{font-size:10px;letter-spacing:.1em;font-weight:800;color:#698568;order:-1;margin:0}
 .supplier-intro{background:#fffdf8;padding:88px 0}
@@ -216,7 +214,6 @@ img{max-width:100%;display:block}
 .steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .step-card{position:relative;background:#eef3e9;border:1px solid #dce7d7;padding:31px 30px 27px;min-height:265px;display:flex;flex-direction:column}
 .step-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--forest) 0 65%,var(--leaf) 65%)}
-.step-number{color:#5e8e5a;font-family:'Lora',Georgia,serif;font-size:35px;line-height:1}
 .step-card h3{font-family:'Lora',Georgia,serif;font-size:27px;font-weight:500;line-height:1.25;margin:19px 0 8px}
 .step-card p{font-size:14px;line-height:1.7;color:#586d5c;margin:0 0 15px}
 .step-card small{font-size:12px;color:#6b8a6d;margin-top:auto;border-top:1px solid #cddccc;padding-top:12px}
