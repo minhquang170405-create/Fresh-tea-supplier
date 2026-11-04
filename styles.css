@@ -173,10 +173,6 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 /* Supplier flow styled for the TS 567 brand. */
-.utility-bar{background:#102f27;color:#dce9d7;font-size:12px;font-weight:600}
-.utility-inner{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.utility-inner a{color:#e6f0dc;text-decoration:none}
-.utility-inner a:hover{text-decoration:underline}
 .site-header{box-shadow:0 8px 24px rgba(9,42,30,.1)}
 .site-nav{gap:25px}
 .site-nav a{min-height:44px;display:inline-flex;align-items:center}
@@ -318,7 +314,6 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
 @media (max-width:800px){.rarity-story,.essence-principles{grid-template-columns:1fr;gap:20px}.rarity-story{margin-top:40px;padding:34px}.essence-principles{padding:31px}}
 @media (max-width:980px){.brand{margin-right:auto}.language-switcher summary{min-height:42px}.language-menu{right:0}}
 @media (max-width:560px){
-  .utility-bar{font-size:10px}.utility-inner{min-height:33px}.utility-inner>a{max-width:165px;text-align:right;line-height:1.25}
   .hero-reference .hero-inner{padding:60px 22px 45px}.hero-reference h1{font-size:clamp(43px,12vw,58px)}.hero-reference h1 span{font-size:.7em}.hero-reference .hero-media{width:calc(100% - 32px);height:260px;margin-bottom:30px}
   .hero-reference .hero-placeholder-copy strong{font-size:19px}.hero-reference .hero-note{margin-top:25px}
   .proof-grid{grid-template-columns:1fr}.proof-grid>div{min-height:78px;padding:12px 0!important;border-right:0;border-bottom:1px solid #cbd7c8}.proof-grid>div:last-child{border-bottom:0}
