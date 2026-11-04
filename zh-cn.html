@@ -13,8 +13,8 @@
     <link rel="alternate" hreflang="zh-TW" href="https://minhquang170405-create.github.io/Fresh-tea-supplier/zh-tw.html" />
     <link rel="alternate" hreflang="x-default" href="https://minhquang170405-create.github.io/Fresh-tea-supplier/" />
     <link rel="stylesheet" href="fonts.css" />
-    <link rel="stylesheet" href="styles.css?v=20261104f" />
-    <script src="script.js?v=20261104b" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261104g" />
+    <script src="script.js?v=20261104c" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳过导航，转到正文</a>
@@ -195,15 +195,15 @@
       <section class="contact-section" id="lien-he" aria-labelledby="contact-title">
         <div class="wrap contact-layout">
           <div><p class="eyebrow light">联系我们</p><h2 id="contact-title">一同探索 <i>TS 567 海茶。</i></h2><p>欢迎爱茶人士、茶品收藏者及合作伙伴与我们交流茶品信息和独家经销合作机会。</p><p class="contact-english" lang="zh-CN">茶品咨询及独家经销合作洽谈：</p><div class="contact-placeholder"><span>[联系电话 / Zalo]</span><span>[联系邮箱]</span><small>联系信息待补充</small></div></div>
-          <form id="quote-form" class="quote-form" novalidate data-preview-message="表单填写有效，但目前仅供预览；信息尚未发送或保存。">
-            <h3>给 TS 567 留言</h3><p>此表单目前仅供预览。接收渠道启用前，所填信息不会发送或保存。</p>
+          <div id="quote-form" class="quote-form" role="group" aria-labelledby="quote-title" aria-describedby="quote-note" data-preview-message="表单填写有效，但目前仅供预览；信息尚未发送或保存。">
+            <h3 id="quote-title">给 TS 567 留言</h3><p id="quote-note">此表单目前仅供预览。接收渠道启用前，所填信息不会发送或保存。</p>
             <div class="form-row"><label>姓名 <span>*</span><input name="name" autocomplete="name" required placeholder="您的姓名" /></label><label>机构名称<input name="company" autocomplete="organization" placeholder="公司或机构名称" /></label></div>
             <div class="form-row"><label>电子邮箱 <span>*</span><input name="email" type="email" autocomplete="email" required placeholder="name@example.com" /></label><label>联系电话<input name="phone" type="tel" autocomplete="tel" placeholder="您的联系电话" /></label></div>
             <div class="form-row"><label>关注方向<input name="interest" placeholder="品茗 / 收藏 / 合作" /></label><label>所在地区<input name="destination" placeholder="国家 / 城市" /></label></div>
             <label>留言内容 <span>*</span><textarea name="message" rows="4" required placeholder="请告诉我们，您希望了解 TS 567 海茶的哪些方面……"></textarea></label>
-            <button class="button button-lime form-submit" type="submit">检查表单 <span aria-hidden="true">↗</span></button>
+            <button class="button button-lime form-submit" type="button">检查表单 <span aria-hidden="true">↗</span></button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
+          </div>
         </div>
       </section>
     </main>

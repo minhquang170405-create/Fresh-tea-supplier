@@ -44,10 +44,13 @@ languageSwitcher?.addEventListener('toggle', () => {
   menuButton?.setAttribute('aria-label', menuOpenLabel);
 });
 
-document.querySelector('#quote-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
+document.querySelector('#quote-form .form-submit')?.addEventListener('click', (event) => {
+  const form = event.currentTarget.closest('#quote-form');
   const status = document.querySelector('#form-status');
-  if (!form.reportValidity()) return;
+  const invalidField = [...form.querySelectorAll('input, textarea')].find((field) => !field.checkValidity());
+  if (invalidField) {
+    invalidField.reportValidity();
+    return;
+  }
   status.textContent = form.dataset.previewMessage || 'Biểu mẫu hợp lệ nhưng đang ở chế độ xem trước. Dữ liệu chưa được gửi hoặc lưu.';
 });

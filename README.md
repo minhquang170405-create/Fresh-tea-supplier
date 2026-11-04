@@ -9,3 +9,5 @@ The site presents the Cù Mông origin, hand harvesting, natural flavor, and an 
 Product imagery, garden imagery, packaging, unconfirmed specifications, partners, and contact details remain clearly marked placeholders. Laboratory results and scans also remain placeholders until approved for publication. The enquiry form is a preview and does not send or save data.
 
 The public website is published from the `main` branch with GitHub Pages at `https://minhquang170405-create.github.io/Fresh-tea-supplier/`.
+
+`DESIGN.md` records the TS 567 visual system and review criteria. `AGENTS.md` directs future AI coding agents to that guide before editing the site.
