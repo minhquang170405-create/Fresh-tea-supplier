@@ -10,4 +10,4 @@ Product imagery, garden imagery, packaging, unconfirmed specifications, partners
 
 The public website is published from the `main` branch with GitHub Pages at `https://minhquang170405-create.github.io/Fresh-tea-supplier/`.
 
-`DESIGN.md` records the TS 567 visual system and review criteria. `AGENTS.md` directs future AI coding agents to that guide before editing the site.
+`DESIGN.md` records the TS 567 concept and content limits. `DESIGN_SYSTEM.md` specifies the implemented tokens, component behavior, QA checks, and the downloaded design-rule sources adapted for this site. `AGENTS.md` directs future AI coding agents to both guides before editing.
