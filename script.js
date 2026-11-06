@@ -49,46 +49,54 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   const cards = [...track.querySelectorAll('.gallery-card')];
   const previous = gallery.querySelector('[data-gallery-prev]');
   const next = gallery.querySelector('[data-gallery-next]');
-  const count = gallery.querySelector('.gallery-count');
   let activeIndex = 0;
   let scrollFrame = 0;
+  let targetLeft = null;
+  const visibleCount = () => window.matchMedia('(max-width: 560px)').matches ? 1 : 2;
+  const maxStart = () => Math.max(0, cards.length - visibleCount());
 
   const render = () => {
-    count.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
-    previous.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    previous.disabled = activeIndex <= 0;
+    next.disabled = activeIndex >= maxStart();
   };
 
-  const indexFromScroll = () => {
-    if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 2) return cards.length - 1;
-    return cards.reduce((closest, card, index) =>
-      Math.abs(card.offsetLeft - track.scrollLeft) < Math.abs(cards[closest].offsetLeft - track.scrollLeft) ? index : closest, 0);
-  };
+  const indexFromScroll = () => Math.min(maxStart(), cards.reduce((closest, card, index) =>
+      Math.abs(card.offsetLeft - track.scrollLeft) < Math.abs(cards[closest].offsetLeft - track.scrollLeft) ? index : closest, 0));
 
   const moveTo = (index) => {
-    activeIndex = Math.max(0, Math.min(cards.length - 1, index));
+    activeIndex = Math.max(0, Math.min(maxStart(), index));
+    targetLeft = cards[activeIndex].offsetLeft;
     track.scrollTo({
-      left: cards[activeIndex].offsetLeft,
+      left: targetLeft,
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
     });
     render();
   };
 
-  previous.addEventListener('click', () => moveTo(activeIndex - 1));
-  next.addEventListener('click', () => moveTo(activeIndex + 1));
+  previous.addEventListener('click', () => moveTo(activeIndex - visibleCount()));
+  next.addEventListener('click', () => moveTo(activeIndex + visibleCount()));
   track.addEventListener('keydown', (event) => {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
     event.preventDefault();
-    moveTo(activeIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    moveTo(activeIndex + (event.key === 'ArrowRight' ? visibleCount() : -visibleCount()));
   });
+  track.addEventListener('pointerdown', () => { targetLeft = null; });
+  track.addEventListener('wheel', () => { targetLeft = null; }, { passive: true });
   track.addEventListener('scroll', () => {
     cancelAnimationFrame(scrollFrame);
     scrollFrame = requestAnimationFrame(() => {
+      if (targetLeft !== null && Math.abs(track.scrollLeft - targetLeft) > 2) return;
+      targetLeft = null;
       activeIndex = indexFromScroll();
       render();
     });
   }, { passive: true });
-  window.addEventListener('resize', render);
+  track.addEventListener('scrollend', () => {
+    targetLeft = null;
+    activeIndex = indexFromScroll();
+    render();
+  });
+  window.addEventListener('resize', () => moveTo(activeIndex));
   render();
 });
 
