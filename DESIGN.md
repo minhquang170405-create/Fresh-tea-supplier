@@ -45,11 +45,11 @@ Use green by role, with leaf green reserved mainly for the most important action
 - Keep Vietnamese, English, Simplified Chinese, and Traditional Chinese for Taiwan aligned in meaning and section order. Translate for tea-industry context rather than word for word.
 - The stated harvest is approximately **20 kg of fresh leaves every two months**. Do not turn it into finished-tea yield, stock on hand, or order capacity.
 - Switzerland is an intended audience, not a claimed established export market.
-- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and source images as explicit placeholders until approved. Do not invent certifications or health claims.
+- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and hero or product images as explicit placeholders until approved. The owner has supplied photos for the horizontal gallery; describe only what each image visibly shows until its exact location and production stage are confirmed. Do not invent certifications or health claims.
 
 ## Review before publishing
 
-Check all four pages at 320, 375, 768, 980, 1024, and 1440px. Verify no horizontal overflow; readable hero and content; keyboard focus and navigation; all fragment links; language switching; text contrast of at least 4.5:1 for normal text; 44px touch targets; reduced-motion behavior; and that the contact preview never transmits information. When adding a real image, set its dimensions and optimize it for the web.
+Check all four pages at 320, 375, 768, 980, 1024, and 1440px. Verify no page-level horizontal overflow; readable hero and content; keyboard focus and navigation; all fragment links; language switching; gallery arrows, touch scrolling, and keyboard controls; text contrast of at least 4.5:1 for normal text; 44px touch targets; reduced-motion behavior; and that the contact preview never transmits information. When adding a real image, set its dimensions and optimize it for the web.
 
 ## Reference material
 
