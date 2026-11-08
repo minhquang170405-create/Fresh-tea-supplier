@@ -69,6 +69,7 @@ img{max-width:100%;display:block}
 .split-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:clamp(28px,3.2vw,48px)}
 .section h2,.contact-section h2{font-size:clamp(42px,5.5vw,70px);max-width:700px}
 .section h2 i,.contact-section h2 i{font-weight:400;color:#5d8b49}
+#quality-title i,#future-title i{display:block;text-wrap:balance}
 .split-heading>p{max-width:610px;color:var(--muted);font-size:14px;margin:44px 0 0;line-height:1.75}
 .product-section{background:var(--paper)}
 .product-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:stretch}
