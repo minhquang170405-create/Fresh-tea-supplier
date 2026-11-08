@@ -45,7 +45,7 @@ Use green by role, with leaf green reserved mainly for the most important action
 - Keep Vietnamese, English, Simplified Chinese, and Traditional Chinese for Taiwan aligned in meaning and section order. Translate for tea-industry context rather than word for word.
 - The stated harvest is approximately **20 kg of fresh leaves every two months**. Do not turn it into finished-tea yield, stock on hand, or order capacity.
 - Switzerland is an intended audience, not a claimed established export market.
-- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and product images as explicit placeholders until approved. The horizontal gallery includes the former harvest photograph from the hero and story. Describe only what each image visibly shows until its exact location and production stage are confirmed. Do not invent certifications or health claims.
+- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and product images as explicit placeholders until approved. The tea-region gallery shows only tea plants and hillside scenery. Keep photographs of people, harvesting, drying, and processing as assets for later sections; do not place them in Vùng trà. Describe only what each displayed image visibly shows until its exact location is confirmed. Do not invent certifications or health claims.
 
 ## Review before publishing
 
