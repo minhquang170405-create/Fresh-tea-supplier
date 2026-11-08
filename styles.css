@@ -394,7 +394,7 @@ html[lang="zh-TW"] .gallery-card figcaption strong{font-family:'Noto Serif CJK T
 @media (max-width:800px){.gallery-shell{--gallery-photo-height:330px}}
 @media (max-width:560px){.gallery-shell{--gallery-photo-height:285px;--gallery-gap:12px}.gallery-arrow{width:48px;height:48px}.gallery-arrow[data-gallery-prev]{left:8px}.gallery-arrow[data-gallery-next]{right:8px}.gallery-card{flex-basis:100%}.gallery-card figcaption{min-height:68px;padding:13px 15px;gap:10px}.gallery-card figcaption strong{font-size:17px}}
 
-/* The owner-selected harvest image replaces the hero placeholder. */
+/* The owner-provided hillside image leads the hero and tea story. */
 .hero-reference .hero-photo{margin:0;aspect-ratio:4/3;min-height:0;background:#214b39}
 .hero-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 54%}
 @media (min-width:981px){

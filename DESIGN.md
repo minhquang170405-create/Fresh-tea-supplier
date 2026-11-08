@@ -36,7 +36,7 @@ Use green by role, with leaf green reserved mainly for the most important action
 
 - Keep one visually dominant action in each section. Main buttons use a restrained rectangular shape, at least 44px of clickable height, clear hover/pressed states, and a visible keyboard focus ring.
 - Navigation, language choices, footer links, and text links need comfortable touch targets. The language menu must work by tap and keyboard, show its current language, and close with Escape or an outside click.
-- Use cards and dashed frames to mark missing images and documents. Placeholder text must say what asset is missing. Replace the whole placeholder when approved source material arrives; do not use a low-resolution source image as a hero. The owner selected photo 07 from the local gallery for the hero; its exact location has not been independently verified.
+- Use cards and dashed frames to mark missing images and documents. Placeholder text must say what asset is missing. Replace the whole placeholder when approved source material arrives; do not use a low-resolution source image as a hero. The owner-provided rocky hillside photograph now appears in the hero and tea story; its exact location has not been independently verified.
 - The contact area is a preview until the owner supplies a real recipient or endpoint. It must never imply that a message was delivered or submit entered details to a URL.
 - Respect `prefers-reduced-motion`. Motion should clarify a state change; it should not interrupt reading.
 
@@ -45,7 +45,7 @@ Use green by role, with leaf green reserved mainly for the most important action
 - Keep Vietnamese, English, Simplified Chinese, and Traditional Chinese for Taiwan aligned in meaning and section order. Translate for tea-industry context rather than word for word.
 - The stated harvest is approximately **20 kg of fresh leaves every two months**. Do not turn it into finished-tea yield, stock on hand, or order capacity.
 - Switzerland is an intended audience, not a claimed established export market.
-- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and product images as explicit placeholders until approved. The owner has supplied photos for the horizontal gallery and selected photo 07 for the hero; describe only what each image visibly shows until its exact location and production stage are confirmed. Do not invent certifications or health claims.
+- Leave unconfirmed sensory notes, packaging, contact details, partners, lab results, and product images as explicit placeholders until approved. The horizontal gallery includes the former harvest photograph from the hero and story. Describe only what each image visibly shows until its exact location and production stage are confirmed. Do not invent certifications or health claims.
 
 ## Review before publishing
 
