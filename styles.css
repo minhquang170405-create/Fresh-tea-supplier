@@ -373,7 +373,8 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
   .placeholder-card span{font-size:11px}
 }
 
-/* The photo rail shows owner-supplied field and processing images. */
+/* Both photo rails share the same controls and responsive card sizing. */
+.community-section{background:#e8ecdf;border-top:1px solid var(--line)}
 .gallery-shell{--gallery-gap:18px;--gallery-photo-height:390px;position:relative;min-width:0}
 .gallery-controls{position:absolute;z-index:2;inset:0 0 auto;height:var(--gallery-photo-height);pointer-events:none}
 .gallery-arrow{position:absolute;top:50%;width:52px;height:52px;display:grid;place-items:center;transform:translateY(-50%);border:1px solid var(--forest);border-radius:3px;background:rgba(255,253,248,.96);color:var(--forest);box-shadow:0 4px 18px rgba(9,42,30,.18);font:700 25px/1 'Be Vietnam Pro',Arial,sans-serif;cursor:pointer;pointer-events:auto;touch-action:manipulation;transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
