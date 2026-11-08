@@ -244,20 +244,10 @@ img{max-width:100%;display:block}
 .future-grid h3{font-family:'Lora',Georgia,serif;font-size:25px;line-height:1.3;font-weight:500;margin:16px 0 9px;color:var(--forest)}
 .future-grid p{font-size:15px;color:#53675a;line-height:1.7;margin:0 0 17px}
 .future-grid small{font-size:12px;font-weight:700;color:#476b43;margin-top:auto}
-.cta-band{background:#20503a;color:#fff;padding:47px 0}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.cta-inner .eyebrow{margin-bottom:9px}
-.cta-inner h2{font-family:'Lora',Georgia,serif;font-size:clamp(30px,3vw,42px);font-weight:400;line-height:1.25;margin:0 0 6px}
-.cta-inner p:not(.eyebrow){font-size:14px;color:#d3e5d0;margin:0}
-.cta-inner .button{flex:none}
-.cta-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px}
-.cta-actions .button{white-space:nowrap}
-.button-top{background:var(--paper);color:var(--forest);border:2px solid var(--pine)}
-.button-top span{display:inline-block;color:var(--pine);font-size:19px;line-height:1;transition:transform .2s}
-.button-top:is(:hover,:focus-visible){background:#e8eddf;color:var(--forest)}
-.button-top:is(:hover,:focus-visible) span{transform:translateY(-3px)}
-@media (max-width:800px){.cta-actions{width:100%;justify-content:flex-start}}
-@media (max-width:560px){.cta-actions{display:grid;grid-template-columns:1fr}}
+.back-to-top{position:fixed;right:calc(24px + env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:30;display:grid;place-items:center;width:56px;height:56px;border:2px solid var(--pine);border-radius:50%;background:var(--paper);color:var(--pine);box-shadow:0 8px 24px rgba(9,42,30,.18);text-decoration:none;touch-action:manipulation;transition:transform .2s,background-color .2s,box-shadow .2s}
+.back-to-top svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.back-to-top:is(:hover,:focus-visible){background:#e8eddf;transform:translateY(-3px);box-shadow:0 12px 28px rgba(9,42,30,.24)}
+@media (max-width:560px){.back-to-top{right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:52px;height:52px}.site-footer{padding-bottom:100px}}
 .quote-form .form-row:nth-of-type(3){margin-bottom:0}
 .quote-form label{display:block}
 .quote-form input,.quote-form textarea{display:block;margin-top:7px}
@@ -305,8 +295,8 @@ img{max-width:100%;display:block}
 
 html[lang="zh-CN"] body{font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif}
 html[lang="zh-TW"] body{font-family:'Microsoft JhengHei','PingFang TC','Noto Sans CJK TC',sans-serif}
-html[lang="zh-CN"] :is(.hero h1,.section h2,.contact-section h2,.product-info h3,.step-card h3,.future-grid h3,.rarity-story h3,.essence-principles h3,.english-statement h2,.cta-inner h2,.quote-form h3,.placeholder-card strong,.gallery-placeholder strong){font-family:'Noto Serif CJK SC','Songti SC','SimSun',serif}
-html[lang="zh-TW"] :is(.hero h1,.section h2,.contact-section h2,.product-info h3,.step-card h3,.future-grid h3,.rarity-story h3,.essence-principles h3,.english-statement h2,.cta-inner h2,.quote-form h3,.placeholder-card strong,.gallery-placeholder strong){font-family:'Noto Serif CJK TC','Songti TC','PMingLiU',serif}
+html[lang="zh-CN"] :is(.hero h1,.section h2,.contact-section h2,.product-info h3,.step-card h3,.future-grid h3,.rarity-story h3,.essence-principles h3,.english-statement h2,.quote-form h3,.placeholder-card strong,.gallery-placeholder strong){font-family:'Noto Serif CJK SC','Songti SC','SimSun',serif}
+html[lang="zh-TW"] :is(.hero h1,.section h2,.contact-section h2,.product-info h3,.step-card h3,.future-grid h3,.rarity-story h3,.essence-principles h3,.english-statement h2,.quote-form h3,.placeholder-card strong,.gallery-placeholder strong){font-family:'Noto Serif CJK TC','Songti TC','PMingLiU',serif}
 html[lang="zh-CN"] .supplier-intro-grid .intro-signature{font-family:'Noto Serif CJK SC','Songti SC','SimSun',serif}
 html[lang="zh-TW"] .supplier-intro-grid .intro-signature{font-family:'Noto Serif CJK TC','Songti TC','PMingLiU',serif}
 html[lang^="zh"] :is(.hero h1 span,.section h2 i,.contact-section h2 i,.rarity-story h3 i,.english-tagline,.contact-english){font-style:normal}
@@ -327,7 +317,7 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
   .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-grid>div:nth-child(2){border-right:0}.proof-grid>div:nth-child(-n+2){border-bottom:1px solid #cbd7c8}
   .supplier-intro-grid{gap:45px}.packing-note{grid-template-columns:1fr 1.2fr}.packing-note a{grid-column:1/-1;width:max-content}
 }
-@media (max-width:800px){.supplier-intro-grid{grid-template-columns:1fr}.steps-grid,.future-grid{grid-template-columns:1fr}.packing-note{grid-template-columns:1fr}.packing-note a{grid-column:auto}.cta-inner{align-items:flex-start;flex-direction:column}}
+@media (max-width:800px){.supplier-intro-grid{grid-template-columns:1fr}.steps-grid,.future-grid{grid-template-columns:1fr}.packing-note{grid-template-columns:1fr}.packing-note a{grid-column:auto}}
 @media (max-width:800px){.rarity-story,.essence-principles{grid-template-columns:1fr;gap:20px}.rarity-story{margin-top:40px;padding:34px}.essence-principles{padding:31px}}
 @media (max-width:980px){.brand{margin-right:auto}.language-switcher summary{min-height:46px}.language-menu{right:0}}
 @media (max-width:560px){
@@ -335,7 +325,7 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
   .hero-reference .hero-placeholder-copy strong{font-size:19px}.hero-reference .hero-note{margin-top:25px}
   .proof-grid{grid-template-columns:1fr}.proof-grid>div{min-height:78px;padding:12px 0!important;border-right:0;border-bottom:1px solid #cbd7c8}.proof-grid>div:last-child{border-bottom:0}
   .supplier-intro{padding:65px 0}.supplier-intro-grid{gap:23px}.supplier-intro-grid p{font-size:15px}
-  .steps-grid,.future-grid{grid-template-columns:1fr}.step-card,.future-grid article{min-height:0}.packing-note{padding:19px}.cta-band{padding:40px 0}.cta-inner .button{width:100%}
+  .steps-grid,.future-grid{grid-template-columns:1fr}.step-card,.future-grid article{min-height:0}.packing-note{padding:19px}
   .quality-copy .metric-grid strong{font-size:21px}.quality-copy .metric-grid span{font-size:11px}
   .rarity-story{padding:27px 22px}.rarity-story h3{font-size:36px}.essence-principles{padding:25px 21px}.essence-principles h3{font-size:27px}.english-statement{padding:58px 0}
   .nav-shell{gap:10px}.language-switcher summary{min-width:88px;padding-inline:10px;gap:7px}
