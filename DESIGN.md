@@ -21,7 +21,6 @@ The current source of truth is `styles.css`. Reuse its variables before adding a
 | Ink | `#18382f` | Main body text |
 | Muted | `#53675a` | Secondary text on cream or paper; at least 4.5:1 contrast |
 | Line | `#d9dfd3` | Quiet dividers |
-| Clay | `#c8764e` | Rare warm accent; never a competing primary action |
 
 Use green by role, with leaf green reserved mainly for the most important action. Do not introduce another competing accent or copy a software brand's palette into this tea site.
 

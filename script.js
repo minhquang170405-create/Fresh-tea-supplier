@@ -100,13 +100,22 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   render();
 });
 
-document.querySelector('#quote-form .form-submit')?.addEventListener('click', (event) => {
-  const form = event.currentTarget.closest('#quote-form');
-  const status = document.querySelector('#form-status');
-  const invalidField = [...form.querySelectorAll('input, textarea')].find((field) => !field.checkValidity());
+const quoteForm = document.querySelector('#quote-form');
+const formStatus = quoteForm?.querySelector('#form-status');
+const clearFormStatus = () => {
+  if (formStatus) formStatus.textContent = '';
+};
+
+quoteForm?.addEventListener('input', clearFormStatus);
+quoteForm?.addEventListener('change', clearFormStatus);
+quoteForm?.querySelector('.form-submit')?.addEventListener('click', () => {
+  clearFormStatus();
+  const invalidField = [...quoteForm.querySelectorAll('input, textarea')].find((field) => !field.checkValidity());
   if (invalidField) {
     invalidField.reportValidity();
     return;
   }
-  status.textContent = form.dataset.previewMessage || 'Biểu mẫu hợp lệ nhưng đang ở chế độ xem trước. Dữ liệu chưa được gửi hoặc lưu.';
+  if (formStatus) {
+    formStatus.textContent = quoteForm.dataset.previewMessage || 'Biểu mẫu hợp lệ nhưng đang ở chế độ xem trước. Dữ liệu chưa được gửi hoặc lưu.';
+  }
 });

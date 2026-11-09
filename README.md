@@ -6,7 +6,7 @@ The sticky header has a language dropdown linking four complete static pages: Vi
 
 The site presents the Cù Mông origin, hand harvesting, natural flavor, and an approximate harvest of 20 kg of fresh tea leaves every two months, as supplied by the owner. This fresh-leaf harvest figure is not a finished-tea yield or an order capacity. The Switzerland section describes an intended audience, not an established export market.
 
-Product imagery, garden imagery, packaging, unconfirmed specifications, partners, and contact details remain clearly marked placeholders. Laboratory results and scans also remain placeholders until approved for publication. The enquiry form is a preview and does not send or save data.
+The hero and tea story use the owner-provided hillside photograph. Tea Origins contains six photographs of tea plants and hillside scenery; Community and Partners contains eight photographs of people and tea-making stages. Exact locations and partner identities remain unconfirmed. Product imagery, packaging, unconfirmed specifications, partner details, and contact details remain clearly marked placeholders. Laboratory results and scans also remain placeholders until approved for publication. The enquiry form is a preview and does not send or save data.
 
 The public website is published from the `main` branch with GitHub Pages at `https://minhquang170405-create.github.io/Fresh-tea-supplier/`.
 
