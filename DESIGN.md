@@ -29,7 +29,7 @@ Use green by role, with leaf green reserved mainly for the most important action
 - Use self-hosted **Be Vietnam Pro** for body text, controls, and Vietnamese labels. Use **Lora** for Vietnamese and English editorial headings. Keep fallbacks for Chinese pages (`Noto Serif CJK SC/TC`, Songti, SimSun/PMingLiU); do not force Latin-only glyphs onto Chinese text.
 - Base body text is 16px with generous line height. Long paragraphs should stay within a comfortable reading width. Small labels may be smaller, but essential instructions and form feedback must stay readable.
 - Keep a consistent spacing rhythm around 8, 16, 24, 32, 48, 64, and 96px. The content container is at most 1240px wide, with responsive side gutters.
-- Desktop header is 86px high; the compact header is 72px. The menu collapses at 980px. Anchored sections need enough scroll offset to remain visible below the sticky header.
+- Desktop header is 86px high; the compact header is 72px. The menu collapses at 1100px to keep landscape-tablet navigation readable. Anchored sections need enough scroll offset to remain visible below the sticky header.
 
 ## Components and interaction
 
