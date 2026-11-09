@@ -100,19 +100,64 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   render();
 });
 
+// Only reset disclosure defaults when crossing the phone breakpoint.
+// Keyboard opening and browser-toolbar resizing must not discard the user's choice.
+const phoneLayout = window.matchMedia('(max-width: 560px)');
+const mobileDisclosures = [...document.querySelectorAll('[data-mobile-disclosure]')];
+const setDisclosureDefaults = () => {
+  mobileDisclosures.forEach((details) => { details.open = !phoneLayout.matches; });
+};
+setDisclosureDefaults();
+phoneLayout.addEventListener('change', setDisclosureDefaults);
+
 const quoteForm = document.querySelector('#quote-form');
 const formStatus = quoteForm?.querySelector('#form-status');
 const clearFormStatus = () => {
-  if (formStatus) formStatus.textContent = '';
+  if (formStatus) {
+    formStatus.textContent = '';
+    delete formStatus.dataset.state;
+  }
 };
 
-quoteForm?.addEventListener('input', clearFormStatus);
-quoteForm?.addEventListener('change', clearFormStatus);
+const fieldError = (field) => document.getElementById(field.getAttribute('aria-describedby'));
+const clearFieldError = (field) => {
+  if (!field.matches('input, textarea')) return;
+  field.removeAttribute('aria-invalid');
+  const error = fieldError(field);
+  if (error) { error.textContent = ''; error.hidden = true; }
+};
+const validateField = (field) => {
+  const valid = field.checkValidity();
+  const error = fieldError(field);
+  if (valid) {
+    clearFieldError(field);
+  } else {
+    field.setAttribute('aria-invalid', 'true');
+    if (error) {
+      error.textContent = field.validity.valueMissing ? field.dataset.requiredMessage : (field.dataset.invalidMessage || field.validationMessage);
+      error.hidden = false;
+    }
+  }
+  return valid;
+};
+['input', 'change'].forEach((type) => quoteForm?.addEventListener(type, (event) => {
+  clearFormStatus();
+  clearFieldError(event.target);
+}));
+// Validate on submission so blur messages cannot move a pointer's click target.
 quoteForm?.querySelector('.form-submit')?.addEventListener('click', () => {
   clearFormStatus();
-  const invalidField = [...quoteForm.querySelectorAll('input, textarea')].find((field) => !field.checkValidity());
+  const fields = [...quoteForm.querySelectorAll('input, textarea')];
+  const invalidField = fields.filter((field) => !validateField(field))[0];
   if (invalidField) {
-    invalidField.reportValidity();
+    const disclosure = invalidField.closest('details');
+    if (disclosure) disclosure.open = true;
+    if (formStatus) {
+      formStatus.dataset.state = 'error';
+      formStatus.textContent = quoteForm.dataset.invalidMessage;
+    }
+    invalidField.focus();
+    invalidField.scrollIntoView({ block: 'center' });
     return;
   }
   if (formStatus) {

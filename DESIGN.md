@@ -37,6 +37,7 @@ Use green by role, with leaf green reserved mainly for the most important action
 - Navigation, language choices, footer links, and text links need comfortable touch targets. The language menu must work by tap and keyboard, show its current language, and close with Escape or an outside click.
 - Use cards and dashed frames to mark missing images and documents. Placeholder text must say what asset is missing. Replace the whole placeholder when approved source material arrives; do not use a low-resolution source image as a hero. The owner-provided rocky hillside photograph now appears in the hero and tea story; its exact location has not been independently verified.
 - The contact area is a preview until the owner supplies a real recipient or endpoint. It must never imply that a message was delivered or submit entered details to a URL.
+- On phones, prioritize product information over pending imagery, use compact section headings, and keep long story copy and optional enquiry fields in accessible native disclosures. All original content remains available; desktop shows the full story and enquiry fields.
 - Respect `prefers-reduced-motion`. Motion should clarify a state change; it should not interrupt reading.
 
 ## Content and trust rules
