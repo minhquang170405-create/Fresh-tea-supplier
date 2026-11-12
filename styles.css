@@ -1,7 +1,7 @@
 /* TS 567: shared components and responsive adjustments, in cascade order. */
-:root{--forest:#153d32;--deep:#0d3028;--pine:#1f5140;--leaf:#8fc957;--cream:#f6f4ec;--paper:#fffdf8;--ink:#18382f;--muted:#53675a;--line:#d9dfd3;--shadow:0 22px 60px rgba(14,48,39,.13)}
+:root{--header-height:86px;--forest:#153d32;--deep:#0d3028;--pine:#1f5140;--leaf:#8fc957;--cream:#f6f4ec;--paper:#fffdf8;--ink:#18382f;--muted:#53675a;--line:#d9dfd3;--shadow:0 22px 60px rgba(14,48,39,.13)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-height)}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:'Be Vietnam Pro',Arial,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 button{font:inherit}
 input{font:inherit}
@@ -15,7 +15,7 @@ img{max-width:100%;display:block}
 .skip-link{position:absolute;left:16px;top:-60px;z-index:1000;background:#fff;padding:10px 18px;color:#0d3028}
 .skip-link:focus{top:8px}
 :focus-visible{outline:3px solid #cb823c;outline-offset:3px}
-.site-header{height:86px;background:var(--paper);border-bottom:1px solid #e7e8df;position:sticky;top:0;z-index:40}
+.site-header{height:var(--header-height);background:var(--paper);border-bottom:1px solid #e7e8df;position:sticky;top:0;z-index:40}
 .nav-shell{height:100%;display:flex;align-items:center;justify-content:space-between}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex:none}
 .brand-image{width:53px;height:53px;overflow:hidden;background:white;border-radius:50%;border:1px solid #e3e9dc;position:relative}
@@ -190,9 +190,9 @@ img{max-width:100%;display:block}
 .site-header{box-shadow:0 8px 24px rgba(9,42,30,.1)}
 .site-nav a{min-height:44px;display:inline-flex;align-items:center}
 .site-nav .nav-cta{min-height:48px}
-.hero-reference{position:relative;display:block;min-height:630px;background:radial-gradient(circle at 78% 75%,rgba(110,157,96,.28),transparent 38%),linear-gradient(115deg,#0c3027 4%,#164c38 62%,#1c5840 100%);overflow:hidden}
+.hero-reference{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vh - var(--header-height));min-height:calc(100dvh - var(--header-height));background:radial-gradient(circle at 78% 75%,rgba(110,157,96,.28),transparent 38%),linear-gradient(115deg,#0c3027 4%,#164c38 62%,#1c5840 100%);overflow:hidden}
 .hero-reference:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse at 85% 96%,transparent 0 51px,rgba(224,247,214,.045) 52px 53px,transparent 54px 91px);pointer-events:none}
-.hero-reference .hero-copy{width:64%;min-height:630px;background:transparent}
+.hero-reference .hero-copy{width:64%;min-height:630px;background:transparent;flex:none}
 .hero-reference .hero-inner{max-width:830px;padding-top:90px;padding-bottom:90px;padding-right:36px}
 .hero-reference h1{font-size:clamp(48px,4.5vw,76px);max-width:710px;line-height:1.12}
 .hero-reference h1 span{font-size:.74em;line-height:1.22;max-width:620px;margin-top:10px}
@@ -251,6 +251,7 @@ img{max-width:100%;display:block}
 .future-grid small{font-size:12px;font-weight:700;color:#476b43;margin-top:auto}
 .future-grid .text-link{align-self:flex-start;margin-top:auto}
 .back-to-top{position:fixed;right:calc(24px + env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:30;display:grid;place-items:center;width:56px;height:56px;border:2px solid var(--pine);border-radius:50%;background:var(--paper);color:var(--pine);box-shadow:0 8px 24px rgba(9,42,30,.18);text-decoration:none;touch-action:manipulation;transition:transform .2s,background-color .2s,color .2s,box-shadow .2s}
+.back-to-top[hidden]{display:none}
 .back-to-top svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .back-to-top:is(:hover,:focus-visible){background:var(--pine);color:var(--paper);transform:translateY(-3px);box-shadow:0 12px 28px rgba(9,42,30,.24)}
 
@@ -304,7 +305,6 @@ html[lang^="zh"] :is(.hero h1,.section h2,.contact-section h2){letter-spacing:.0
 html[lang^="zh"] .hero-reference h1 span{font-size:.66em}
 html[lang^="zh"] .eyebrow{letter-spacing:.06em}
 @media (max-width:980px) {
-  .hero-reference{min-height:0}
   .hero-reference .hero-copy{width:100%;min-height:0}
   .hero-reference .hero-inner{max-width:none;padding:72px max(28px,calc((100vw - 760px)/2)) 50px}
   .hero-reference .hero-media{position:relative;top:auto;right:auto;width:calc(100% - 56px);min-height:0;margin:0 auto 45px}
@@ -323,7 +323,7 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
   .rarity-story{margin-top:40px;padding:34px}
 }
 @media (max-width:1100px) {
-  .site-header{height:72px}
+  :root{--header-height:72px}
   .brand-image{width:45px;height:45px}
   .brand-image img{width:81px;left:-18px;top:-35px}
   .brand-copy strong{font-size:22px}
@@ -333,7 +333,6 @@ html[lang^="zh"] .eyebrow{letter-spacing:.06em}
   .site-nav.open{display:flex}
   .site-nav a{padding:12px 5px;font-size:14px}
   .site-nav .nav-cta{margin-top:10px;justify-content:space-between;padding:15px}
-  html{scroll-padding-top:72px}
   .site-nav a:not(.nav-cta)::after{right:auto;width:90px;bottom:3px}
   .brand{margin-right:auto}
   .language-switcher summary{min-height:46px}
@@ -385,7 +384,7 @@ html[lang="zh-TW"] .gallery-card figcaption strong{font-family:'Noto Serif CJK T
   .gallery-shell{--gallery-photo-height:330px}
 }
 
-.hero-reference .hero-photo{margin:0;aspect-ratio:4/3;min-height:0;background:#214b39}
+.hero-reference .hero-photo{flex:none;margin:0;aspect-ratio:4/3;min-height:0;background:#214b39}
 .hero-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 54%}
 @media (max-width:980px) {
   .hero-reference .hero-photo{height:auto;aspect-ratio:16/9;margin:0 auto 45px}
@@ -464,7 +463,7 @@ html[lang="zh-TW"] .gallery-card figcaption strong{font-family:'Noto Serif CJK T
   .site-footer{padding:40px 0 88px}
 }
 @media (min-width:981px) {
-  .hero-reference{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;min-height:560px;padding:64px max(32px,calc((100% - 1240px)/2))}
+  .hero-reference{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding:64px max(32px,calc((100% - 1240px)/2))}
   .hero-reference .hero-copy{width:100%;min-height:0;overflow:visible}
   .hero-reference .hero-inner{max-width:none;padding:0}
   .hero-reference h1{font-size:clamp(52px,4.5vw,68px)}

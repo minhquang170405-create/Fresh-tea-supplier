@@ -4,6 +4,30 @@ const languageSwitcher = document.querySelector('.language-switcher');
 const menuOpenLabel = menuButton?.dataset.menuOpenLabel || 'Mở menu';
 const menuCloseLabel = menuButton?.dataset.menuCloseLabel || 'Đóng menu';
 
+// Reveal the return link only after the introduction clears the sticky header.
+const openingHero = document.querySelector('.hero');
+const siteHeader = document.querySelector('.site-header');
+const backToTop = document.querySelector('.back-to-top');
+if (openingHero && siteHeader && backToTop) {
+  let heroObserver;
+  const observeOpening = () => {
+    const headerHeight = siteHeader.getBoundingClientRect().height;
+    const updateVisibility = () => {
+      backToTop.hidden = openingHero.getBoundingClientRect().bottom > headerHeight;
+    };
+    heroObserver?.disconnect();
+    heroObserver = new IntersectionObserver(updateVisibility, {
+      rootMargin: `-${headerHeight}px 0px 0px 0px`,
+      threshold: 0,
+    });
+    heroObserver.observe(openingHero);
+    updateVisibility();
+  };
+  observeOpening();
+  new ResizeObserver(observeOpening).observe(siteHeader);
+  window.addEventListener('pageshow', observeOpening);
+}
+
 menuButton?.addEventListener('click', () => {
   const isOpen = menu.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
